@@ -1,0 +1,93 @@
+﻿<Window x:Class="networkProjectt.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:networkProjectt"
+        mc:Ignorable="d"
+        Title="MainWindow" Name="window" Height="650" Width="320" WindowStyle="None"   ResizeMode="NoResize"  Background="Transparent"  AllowsTransparency="True"   >
+    <Border CornerRadius=" 40" Background="LimeGreen"   BorderBrush="Gray" BorderThickness=" 0.3" >
+        <Grid>
+            <Grid.RowDefinitions >
+                <RowDefinition Height=" *" />
+                <RowDefinition Height=" 20*" />
+                <RowDefinition Height=" *" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row=" 0"   >
+                <Button Width=" 20" BorderBrush="White" Background="LimeGreen" Foreground="White"  Command="{Binding CloseCommand}" Content="X" Height=" 20" Margin="260,0,0,0 "  ></Button>
+            </Grid>
+            <Button Background="LimeGreen" BorderBrush="White" Foreground="White" Name="button" Height="20" Width=" 70" Click="button_Click" >connect</Button>
+            <Grid Grid.Row=" 1"  >
+                <Grid.RowDefinitions >
+                    <RowDefinition Height=" *"></RowDefinition>
+                    <RowDefinition Height=" 7*"></RowDefinition>
+                    <RowDefinition Height=" *"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row=" 0"       >
+                    <Grid.RowDefinitions >
+                        <RowDefinition Height=" *"></RowDefinition>
+                        <RowDefinition Height=" *"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row=" 0" Background="LimeGreen"  Margin=" 3">
+                        <StackPanel Orientation="Horizontal"  >
+                            <Image Source="/Imagess/whatss.jpg" Margin=" 1" ></Image>
+                            <Label Content=" WhatsApp" FontSize=" 12" Foreground="White" ></Label>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Grid.Row=" 1"  Background="LimeGreen" >
+                        <StackPanel Orientation="Horizontal"  >
+                            <Image x:Name="prof" Margin=" 1" Source="/Imagess/girl.jpg" Width=" 50" Height=" 30"></Image>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row=" 1" Background="LimeGreen" >
+                <Label Name="lb" Width=" 180" Height=" 30" Background="Black" Visibility="Hidden"  ></Label>
+                    <Image Source="/Imagess/w.jpg"  Height=" 900"/>
+                    <ListBox   x:Name="list"   Background="Transparent" Foreground="Black"   FontSize="20 " Width=" 320" Height=" 450" Margin="0,0,10,20">
+                    </ListBox>
+                </Grid>
+                <Grid Grid.Row=" 2" Background="LimeGreen"  >
+                    <Border  Grid.Row="1" BorderBrush="Lime"   BorderThickness=" 3" Margin="7" CornerRadius=" 10" >
+                        <StackPanel Orientation="Horizontal"  >
+                            <TextBox Name="messtxtb"
+                                  Foreground="White" Height="30"   Width=" 200"
+                         BorderThickness=" 0"
+                                         Cursor="Hand" 
+                         FontSize=" 20" Background="LimeGreen" Margin="0,7,0,-7.2" >
+                            </TextBox>
+                            <Button  Background="LimeGreen" Width=" 17" Height=" 20" x:Name="voicebtn"
+                                   Cursor="Hand" 
+                        BorderBrush="LimeGreen"  FontSize=" 11" BorderThickness=" 1"  Command="{Binding VoiceCommand}"  >
+                                <StackPanel  Orientation="Horizontal" >
+                                    <Image Source="/Imagess/voice3.jpg" Width=" 15" Height="18" ></Image>
+                                </StackPanel>
+                            </Button><Button Background="LimeGreen" Width=" 19" Height="20" x:Name="videobtn"
+                                   Cursor="Hand" 
+                        BorderBrush="LimeGreen"  FontSize=" 11" BorderThickness=" 1"  Command="{Binding VideoCommand}"  >
+                                <StackPanel Orientation="Horizontal" >
+                                    <Image Source="/Imagess/stop2.jpg" Width=" 17" Height=" 17"></Image>
+                                </StackPanel>
+                            </Button>
+                               
+                            <Button Background="LimeGreen" Width=" 19" Height="20" x:Name="photobtn"
+                                   Cursor="Hand" 
+                        BorderBrush="LimeGreen"  FontSize=" 11" BorderThickness=" 1"  Command="{Binding PhotoCommand}">
+                                <StackPanel Orientation="Horizontal" >
+                                    <Image Source="/Imagess/photo3 (2).png" Width=" 17" Height=" 17"></Image>
+                                </StackPanel>
+                            </Button> 
+                            <Button Background="LimeGreen" Width=" 19" Height="20" x:Name="sendbtn"
+                                   Cursor="Hand" 
+                        BorderBrush="LimeGreen"  FontSize=" 11" BorderThickness=" 1"  Command="{Binding SendCommand}">
+                                <StackPanel Orientation="Horizontal" >
+                                    <Image Source="/Imagess/arrow4.png" Width=" 17" Height=" 17"></Image>
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Border>
+
+</Window>
